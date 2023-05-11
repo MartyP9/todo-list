@@ -17,34 +17,33 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
         <h2>Edit List Item</h2>
         <section class="todo">
             
-                <ul class="todo-list">
-                    <% todoTasks.forEach(task =>{%>
-                        <% if (task._id =idtask) { %>
-                            <li class="todo-list-item">
-                                <form action="/edit/<%= task._id%>"
-                                    method = "POST">
-                                    <input type="text" name="title" value="<%=task.title%>">
-                                    <textarea rows="6" cols="45" value="<%=task.content%>" name="content" placeholder ="Details"></textarea>
-                                    <button type="confirm"><span class="fas fa-plus">Confirm</span></button>
-                                    <a href="/" class="cancel">Cancel</a>
-                                </form>
-                            </li>
-                        <% } else {%>
+            <ul class="todo-list">
+                <% todoTasks.forEach(details=> { %>
+                    <% if (details._id==idTask) { %>
+                        <li class="todo-list-item">
+                            <form action="/edit/<%= details._id %>" method="POST">
+                                <input type="text" value="<%= details.title %>" name="title">
+                                <textarea rows="6" cols="45" name="content"><%= details.content %></textarea>
+                                <button type="submit" class="confirm">Confirm</button>
+                                <a href="/" class="cancel">Cancel</a>
+                            </form>
+                        </li>
+                        <% } else { %>
                             <li class="todo-list-item">
                                 <div class="item-title">
-                                    <%= task.title %>
+                                    <%= details.title %>
                                 </div>
                                 <div class="item-content">
-                                    <%= task.content %>
+                                    <%= details.content %>
                                 </div>
-                                <a href="/edit/<%=task._id %>" class="edit" ><span class="fas fa-edit"></span></a>
-                                <a href="/remove/<%=task._id %>" class="remove" ><span class="fas fa-times"></span></a>
+                                <a href="/edit/<%= details._id %>" class="edit"> <span class="fas fa-edit"></span>
+                                </a>
+                                <a href="/remove/<%= details._id %>" class="remove"> <span class="fas fa-times"></span>
+                                </a>
                             </li>
-                        <%} %>
-                        
-                   <% }) %>
-                </ul>
-            </form>
+                            <% } %>
+                        <% }) %>
+            </ul>
         </section>
     </section>
 </body>

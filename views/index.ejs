@@ -17,10 +17,10 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
         <h2>To Do List</h2>
         <section class="todo">
             <form action="/" method="POST" class="todo-header">
-                <input type="text" name="title" value="title">
-                <textarea rows="6" cols="45" value="content" name="content" placeholder ="Details"></textarea>
+                <input type="text" value="title" name="title" placeholder ="Task Title">
+                <textarea rows="6" cols="45" value="content" name="content" placeholder ="Task Details"></textarea>
                 <!-- <textarea type="date" value="duedate" placeholder="Due Date"></textarea> -->
-                <button type="submit"><span class="fas fa-plus">Add Task</span></button>
+                <button type="submit"><span class="fas fa-plus"></span>Add Task</button>
                 <ul class="todo-list">
                     <% todoTasks.forEach(task =>{%>
                         <li class="todo-list-item">

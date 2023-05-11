@@ -1,0 +1,163 @@
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clear {
+   clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+    background-color: rgb(145, 123, 83);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+.todo-container{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, .2);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+.todo{
+    width: 80%;
+    margin-left: 50px;
+}
+h2{
+    margin-left: 50px;
+    padding: 10px;
+    font-size: 2rem;
+}
+input{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 4px;
+    border-radius: 2px;
+    height: 20px;
+    width: 100%;
+}
+textarea{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: block;
+    width: 100%;
+    margin: 4px;
+    border-radius: 4px;
+}
+.todo-header button{
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 5px;
+    padding: 5px;
+    background-color: forestgreen;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+ul{
+    list-style: none;
+}
+
+.todo-list-item {
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.item-content {
+    font-size: .8rem;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.todo-list-item form {
+    width: 100%;
+    display: flex;
+}
+
+.todo-list-item input {
+    flex-grow: 2;
+    margin-right: 20px;
+    border: none;
+    border-radius: 5px;
+}
+.todo-list-item .confirm {
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    background-color: rgb(51, 212, 100);
+    margin-left: 5px;
+    max-height: 30px;
+    display: block;
+}
+
+.todo-list-item .cancel {
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    background-color: rgb(223, 43, 43);
+    margin-left: 5px;
+    max-height: 30px;
+    display: block;
+}
+
+.todo-list-item div {
+    flex-grow: 2;
+}
+
+.todo-list-item .edit {
+    color: rgb(143, 233, 58);
+    margin-right: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: auto;
+}
+
+.todo-list-item .remove {
+    color: rgb(243, 96, 96);
+    margin-right: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
