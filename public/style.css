@@ -25,7 +25,7 @@
 
 body {
     background-color: rgb(145, 123, 83);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Ysabeau', arial, sans-serif;
 }
 
 
@@ -61,14 +61,14 @@ h2{
     font-size: 2rem;
 }
 input{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Ysabeau', arial, sans-serif;
     margin: 4px;
     border-radius: 2px;
     height: 20px;
     width: 100%;
 }
 textarea{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Ysabeau', arial, sans-serif;
     display: block;
     width: 100%;
     margin: 4px;
@@ -82,7 +82,7 @@ textarea{
     margin: 5px;
     padding: 5px;
     background-color: forestgreen;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Ysabeau', arial, sans-serif;
 }
 ul{
     list-style: none;
