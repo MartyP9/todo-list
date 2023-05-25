@@ -11,7 +11,7 @@ module.exports = {
         })
     }),
     deleteTask: (async (req, res) => {
-        const id = await req.params.id;
+        const id = req.params.id;
         try {
             const updatedResult =
                 await TodoTask.findByIdAndRemove(
@@ -20,6 +20,7 @@ module.exports = {
             res.redirect("/");
         } catch (err) {
             if (err) return res.status(500).send(err);
+            console.log(err)
             res.redirect("/");
         }}),
 
