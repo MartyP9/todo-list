@@ -3,8 +3,9 @@ const express = require('express')
 const app = express()
 const PORT = 3000;
 const mongoose = require('mongoose')
+const connectDB = require('./config/db')
 const TodoTask = require('./models/todotask')
-require('dotenv').config()
+require('dotenv').config({path: './config/.env'})
 
 //Set Middleware
 app.set('view engine', 'ejs');
@@ -12,9 +13,7 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }));
 
 // Connect to DB
-mongoose.connect(process.env.DB_CONNECTION, {useNewUrlParser:true})
-.then(() => console.log('Connected Successfully to db'))
-.catch((err) => { console.error(err); });
+connectDB()
 
 async function getTodos(){
     const TodoTasks = await TodoTask.find({});
